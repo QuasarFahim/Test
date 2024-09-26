@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -130,6 +131,166 @@
         <div class="newspaper">
             <h2>Diving into Adventure</h2>
             <p>In recent years, diving has emerged as a popular recreational activity, allowing individuals to explore the breathtaking underwater world. From vibrant coral reefs teeming with life to the mysteries of sunken shipwrecks, the ocean offers a plethora of experiences for adventurous souls. As divers descend beneath the waves, they witness the beauty of marine ecosystems, while also understanding the importance of conservation. With proper training and equipment, diving not only provides thrill and excitement but also fosters a deep appreciation for our planet’s oceans.</p>
+        </div>
+
+        <ul>
+            <li>Fun Fact: A day on Venus is 243 Earth days!</li>
+            <li>I'm learning about physics and space.</li>
+            <li>Stay tuned for more updates!</li>
+        </ul>
+        <button id="funFactButton">Show Another Fun Fact</button>
+        <p id="newFact" style="display: none;"></p>
+    </div>
+
+    <script>
+        const button = document.getElementById('funFactButton');
+        const newFact = document.getElementById('newFact');
+
+        button.addEventListener('click', function() {
+            newFact.textContent = "Did you know? Neutron stars can spin up to 600 times per second!";
+            newFact.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First GitHub Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #3498db;
+            padding: 20px;
+            color: white;
+            height: 100vh; /* Full height */
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .sidebar h2 {
+            text-align: center;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            transition: background 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #2980b9; /* Darker color on hover */
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            display: block;
+            margin: 20px auto;
+        }
+        .newspaper {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        li {
+            background: #e2e2e2;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Responsive Styles */
+        @media (min-width: 600px) {
+            .content {
+                padding: 40px;
+            }
+            h1 {
+                font-size: 2.5em;
+            }
+            ul {
+                max-width: 800px;
+            }
+            button {
+                padding: 12px 20px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 3em;
+            }
+            .newspaper {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <a href="gallery.html">Gallery</a>
+        <a href="article.html">Article</a>
+        <a href="about.html">About</a>
+        <a href="academics.html">Academics</a>
+        <a href="faculty.html">Faculty</a>
+    </div>
+
+    <div class="content">
+        <h1>Welcome to My First GitHub Repository!</h1>
+
+        <p>This is a simple test page.</p>
+        
+        <img src="Untitled.jpg" alt="Diver" />
+
+        <div class="newspaper">
+            <h2>Physics of Diving</h2>
+            <p>Diving involves several physical principles and concepts, particularly from fluid dynamics and mechanics. It allows individuals to explore breathtaking underwater worlds while understanding the physics at play. As divers descend, they experience buoyancy, pressure, and hydrodynamics, which all contribute to the diving experience.</p>
+            <p>Buoyancy helps divers float or sink based on their body density, while pressure increases with depth, affecting air-filled spaces. The motion through water is influenced by drag, and divers must master these principles to ensure safety and enhance their adventures underwater.</p>
         </div>
 
         <ul>
