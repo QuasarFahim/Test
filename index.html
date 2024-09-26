@@ -10,37 +10,58 @@
             background-color: #f4f4f4;
             color: #333;
             margin: 0;
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #3498db;
+            padding: 20px;
+            color: white;
+            height: 100vh; /* Full height */
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .sidebar h2 {
+            text-align: center;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            transition: background 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #2980b9; /* Darker color on hover */
+        }
+        .content {
+            flex: 1;
             padding: 20px;
         }
         h1 {
             color: #4CAF50;
             text-align: center;
         }
-        nav {
-            text-align: center;
-            margin-bottom: 20px;
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            display: block;
+            margin: 20px auto;
         }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #4CAF50;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
+        .newspaper {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         ul {
             list-style-type: none;
             padding: 0;
             max-width: 600px;
-            margin: 0 auto;
+            margin: 20px auto;
         }
         li {
             background: #e2e2e2;
@@ -61,24 +82,10 @@
         button:hover {
             background-color: #45a049;
         }
-        .newspaper {
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin-top: 20px;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            display: block;
-            margin: 20px auto;
-        }
-
+        
         /* Responsive Styles */
         @media (min-width: 600px) {
-            body {
+            .content {
                 padding: 40px;
             }
             h1 {
@@ -103,34 +110,36 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to My First GitHub Repository!</h1>
-    
-    <nav>
-        <ul>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="article.html">Article</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="academics.html">Academics</a></li>
-            <li><a href="faculty.html">Faculty</a></li>
-        </ul>
-    </nav>
-    
-    <p>This is a simple test page.</p>
-    
-    <img src="Untitled.jpg" alt="Diver" />
 
-    <div class="newspaper">
-        <h2>Diving into Adventure</h2>
-        <p>In recent years, diving has emerged as a popular recreational activity, allowing individuals to explore the breathtaking underwater world. From vibrant coral reefs teeming with life to the mysteries of sunken shipwrecks, the ocean offers a plethora of experiences for adventurous souls. As divers descend beneath the waves, they witness the beauty of marine ecosystems, while also understanding the importance of conservation. With proper training and equipment, diving not only provides thrill and excitement but also fosters a deep appreciation for our planet’s oceans.</p>
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <a href="gallery.html">Gallery</a>
+        <a href="article.html">Article</a>
+        <a href="about.html">About</a>
+        <a href="academics.html">Academics</a>
+        <a href="faculty.html">Faculty</a>
     </div>
 
-    <ul>
-        <li>Fun Fact: A day on Venus is 243 Earth days!</li>
-        <li>I'm learning about physics and space.</li>
-        <li>Stay tuned for more updates!</li>
-    </ul>
-    <button id="funFactButton">Show Another Fun Fact</button>
-    <p id="newFact" style="display: none;"></p>
+    <div class="content">
+        <h1>Welcome to My First GitHub Repository!</h1>
+
+        <p>This is a simple test page.</p>
+        
+        <img src="Untitled.jpg" alt="Diver" />
+
+        <div class="newspaper">
+            <h2>Diving into Adventure</h2>
+            <p>In recent years, diving has emerged as a popular recreational activity, allowing individuals to explore the breathtaking underwater world. From vibrant coral reefs teeming with life to the mysteries of sunken shipwrecks, the ocean offers a plethora of experiences for adventurous souls. As divers descend beneath the waves, they witness the beauty of marine ecosystems, while also understanding the importance of conservation. With proper training and equipment, diving not only provides thrill and excitement but also fosters a deep appreciation for our planet’s oceans.</p>
+        </div>
+
+        <ul>
+            <li>Fun Fact: A day on Venus is 243 Earth days!</li>
+            <li>I'm learning about physics and space.</li>
+            <li>Stay tuned for more updates!</li>
+        </ul>
+        <button id="funFactButton">Show Another Fun Fact</button>
+        <p id="newFact" style="display: none;"></p>
+    </div>
 
     <script>
         const button = document.getElementById('funFactButton');
