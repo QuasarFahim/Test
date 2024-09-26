@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First GitHub Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #e2e2e2;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My First GitHub Repository!</h1>
+    <p>This is a simple test page.</p>
+    <ul>
+        <li>Fun Fact: A day on Venus is 243 Earth days!</li>
+        <li>I'm learning about physics and space.</li>
+        <li>Stay tuned for more updates!</li>
+    </ul>
+    <button id="funFactButton">Show Another Fun Fact</button>
+    <p id="newFact" style="display: none;"></p>
+
+    <script>
+        const button = document.getElementById('funFactButton');
+        const newFact = document.getElementById('newFact');
+
+        button.addEventListener('click', function() {
+            newFact.textContent = "Did you know? Neutron stars can spin up to 600 times per second!";
+            newFact.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
