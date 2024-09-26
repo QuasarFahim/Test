@@ -14,10 +14,13 @@
         }
         h1 {
             color: #4CAF50;
+            text-align: center;
         }
         ul {
             list-style-type: none;
             padding: 0;
+            max-width: 600px;
+            margin: 0 auto;
         }
         li {
             background: #e2e2e2;
@@ -32,6 +35,8 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            display: block;
+            margin: 20px auto;
         }
         button:hover {
             background-color: #45a049;
@@ -47,6 +52,33 @@
             max-width: 100%;
             height: auto;
             border-radius: 5px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        /* Responsive Styles */
+        @media (min-width: 600px) {
+            body {
+                padding: 40px;
+            }
+            h1 {
+                font-size: 2.5em;
+            }
+            ul {
+                max-width: 800px;
+            }
+            button {
+                padding: 12px 20px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 3em;
+            }
+            .newspaper {
+                padding: 20px;
+            }
         }
     </style>
 </head>
