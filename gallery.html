@@ -30,6 +30,12 @@
             transform: scale(1.05);
         }
 
+        .photo {
+            height: 150px; /* Set height for the images */
+            background-size: cover;
+            background-position: center;
+        }
+
         .description {
             padding: 10px;
             text-align: center;
@@ -46,44 +52,28 @@
 <body>
 
     <h1>Gallery</h1>
-    <div class="gallery">
-        <div class="gallery-item">
-            <div class="photo"></div>
-            <div class="description">
-                <p>Description for Photo 1</p>
-            </div>
-        </div>
-        <div class="gallery-item">
-            <div class="photo"></div>
-            <div class="description">
-                <p>Description for Photo 2</p>
-            </div>
-        </div>
-        <div class="gallery-item">
-            <div class="photo"></div>
-            <div class="description">
-                <p>Description for Photo 3</p>
-            </div>
-        </div>
-        <div class="gallery-item">
-            <div class="photo"></div>
-            <div class="description">
-                <p>Description for Photo 4</p>
-            </div>
-        </div>
-        <div class="gallery-item">
-            <div class="photo"></div>
-            <div class="description">
-                <p>Description for Photo 5</p>
-            </div>
-        </div>
-        <div class="gallery-item">
-            <div class="photo"></div>
-            <div class="description">
-                <p>Description for Photo 6</p>
-            </div>
-        </div>
-    </div>
+    <div class="gallery" id="gallery"></div>
+
+    <script>
+        const galleryContainer = document.getElementById('gallery');
+
+        for (let i = 1; i <= 12; i++) {
+            const galleryItem = document.createElement('div');
+            galleryItem.className = 'gallery-item';
+
+            const photo = document.createElement('div');
+            photo.className = 'photo';
+            photo.style.backgroundImage = `url('A (${i}).jpg')`; // Set the background image
+
+            const description = document.createElement('div');
+            description.className = 'description';
+            description.innerHTML = `<p>Description for Photo ${i}</p>`; // Description text
+
+            galleryItem.appendChild(photo);
+            galleryItem.appendChild(description);
+            galleryContainer.appendChild(galleryItem);
+        }
+    </script>
 
 </body>
 </html>
