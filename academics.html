@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics - Department of Physics - Rangia College</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #3498db;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .tab {
+            display: flex;
+            justify-content: space-around;
+            background-color: #3498db;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tab button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #eaf6fd;
+            border: 1px solid #3498db;
+        }
+
+        .active {
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Academics</h1>
+        
+        <div class="section">
+            <h2>National Education Policy (NEP)</h2>
+            <p>
+                The National Education Policy (NEP) aims to transform the education system in India by promoting a holistic and multidisciplinary approach to learning. Under NEP, the FYUGP (Four-Year Undergraduate Program) is introduced, allowing students greater flexibility and choice in their subjects. This initiative enhances the learning experience and prepares students for a rapidly changing world.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Syllabus</h2>
+            <div class="tab">
+                <button class="tab-button" onclick="openTab(event, 'syllabusTab')">View Physics Syllabus</button>
+                <button class="tab-button" onclick="openTab(event, 'otherTab')">Other Programs</button>
+            </div>
+
+            <div id="syllabusTab" class="tab-content">
+                <h3>Physics Syllabus</h3>
+                <iframe src="syllabus.pdf" title="Physics Syllabus"></iframe>
+            </div>
+
+            <div id="otherTab" class="tab-content">
+                <h3>Other Programs</h3>
+                <p>Details about other academic programs will be available here soon.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Contact us: <a href="mailto:info@rangiacollege.edu">info@rangiacollege.edu</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
