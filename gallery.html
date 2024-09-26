@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            background-color: #3498db; /* Solid color for the photo */
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .description {
+            padding: 10px;
+            text-align: center;
+            background-color: #fff;
+            border-top: 2px solid #3498db;
+        }
+
+        .description p {
+            margin: 0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Gallery</h1>
+    <div class="gallery">
+        <div class="gallery-item">
+            <div class="photo"></div>
+            <div class="description">
+                <p>Description for Photo 1</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <div class="photo"></div>
+            <div class="description">
+                <p>Description for Photo 2</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <div class="photo"></div>
+            <div class="description">
+                <p>Description for Photo 3</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <div class="photo"></div>
+            <div class="description">
+                <p>Description for Photo 4</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <div class="photo"></div>
+            <div class="description">
+                <p>Description for Photo 5</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <div class="photo"></div>
+            <div class="description">
+                <p>Description for Photo 6</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
